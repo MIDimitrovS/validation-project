@@ -1,7 +1,7 @@
 function checkString(stringLength, string) {
   const regex = new RegExp(
-    `^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[^A-Za-z0-9\\s]).{1,${stringLength}}$`
-  );
+    `^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!-\/:-@\[-\`{-~])[A-Za-z0-9!-\/:-@\[-\`{-~]{5,${stringLength}}$`
+  )
 
   return regex.test(string);
 }
